@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-push:
-branches:
-      - main  # Adjust this to your main branch name
+ push:
+  branches:
+      master  # Adjust this to your main branch name
 
  
 
@@ -22,5 +22,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
-        branch: gh-pages  # The branch you want to deploy to
-        folder: .  # The folder containing your HTML file and other assets
+        branch: master # The branch you want to deploy to
+        folder: New Text Document.html  # The folder containing your HTML file and other assets
