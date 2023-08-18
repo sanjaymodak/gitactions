@@ -1,0 +1,26 @@
+name: Deploy to GitHub Pages
+
+on:
+push:
+branches:
+      - main  # Adjust this to your main branch name
+
+ 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+ 
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+ 
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: gh-pages  # The branch you want to deploy to
+        folder: .  # The folder containing your HTML file and other assets
